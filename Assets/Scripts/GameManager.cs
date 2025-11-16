@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject JordanEnemy;
     public TextMeshProUGUI scoreText;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -51,7 +54,10 @@ public class GameManager : MonoBehaviour
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     void CreateJordanEnemy()
