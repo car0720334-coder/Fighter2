@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public GameObject cloudPrefab;
     public GameObject JordanEnemy;
     public GameObject ChrisEnemy;
+<<<<<<< Updated upstream
+=======
+    public GameObject HealthPackPrefab;
+    public GameObject Coin;
+>>>>>>> Stashed changes
 
     public TextMeshProUGUI livesText;
 
@@ -32,6 +37,10 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("CreateEnemy", 1, 3);
         InvokeRepeating("CreateJordanEnemy", 2, 4.5f);
         InvokeRepeating("CreateChrisEnemy", 3, 6f);
+<<<<<<< Updated upstream
+=======
+        InvokeRepeating("CreateCoin", 2, 6);
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -54,6 +63,20 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(ChrisEnemy, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
     }
+<<<<<<< Updated upstream
+=======
+
+    void CreateHealthPack()
+    {
+        Instantiate(HealthPackPrefab, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
+    }
+
+    void CreateCoin()
+    {
+        Instantiate(Coin, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
+    }
+
+>>>>>>> Stashed changes
     void CreateSky()
     {
         for (int i = 0; i < 30; i++)
