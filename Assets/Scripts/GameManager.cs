@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject ChrisEnemy;
 
     public TextMeshProUGUI livesText;
-
+    public TextMeshProUGUI scoreText;
     public float horizontalScreenSize;
     public float verticalScreenSize;
 
@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
         horizontalScreenSize = 10f;
         verticalScreenSize = 6.5f;
         score = 0;
+        UpdateScoreText();
         Instantiate(playerPrefab, transform.position, Quaternion.identity);
         CreateSky();
         InvokeRepeating("CreateEnemy", 1, 3);
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
         Instantiate(enemyOnePrefab, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
     }
 
-     void CreateJordanEnemy()
+    void CreateJordanEnemy()
     {
         Instantiate(JordanEnemy, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
     }
@@ -62,9 +63,16 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    void UpdateScoreText()
+    {
+        if (scoreText != null)
+            scoreText.text = "Score: " + score;
+    }
     public void AddScore(int earnedScore)
     {
         score = score + earnedScore;
+        UpdateScoreText();
     }
 
     public void ChangeLivesText (int currentLives)
