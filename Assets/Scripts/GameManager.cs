@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 =======
     public GameObject JordanEnemy;
     public TextMeshProUGUI scoreText;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     public TextMeshProUGUI livesText;
@@ -47,7 +50,10 @@ public class GameManager : MonoBehaviour
     }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     void CreateJordanEnemy()
     {
         Instantiate(JordanEnemy, new Vector3(Random.Range(-horizontalScreenSize, horizontalScreenSize) * 0.9f, verticalScreenSize, 0), Quaternion.Euler(180, 0, 0));
