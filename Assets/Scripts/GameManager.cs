@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
         InvokeRepeating("CreateCoin", 2, 6);
 
+        InvokeRepeating("CreateCoin", 2, 6);
+
+
         InvokeRepeating("CreateHealthPack", 1, 3);
     }
 
